@@ -1,4 +1,4 @@
-
+import java.lang.Math;
 public class Polynomial {
 	double[] array;
 	Polynomial() {
@@ -34,7 +34,7 @@ public class Polynomial {
 	public double evaluate (double number){
 		double to_return = 0.0;
 		for (int i = 1; i < array.length; i++) {
-			to_return  += (array[i] * number);
+			to_return  += (array[i] * Math.pow(number,i));
 		}
 		return (to_return + array[0]);
 	}
